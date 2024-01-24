@@ -1,0 +1,23 @@
+.navbar1{
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(30, 196, 196);
+}
+.railway{
+    margin-top: 15%;
+    padding-left: 10%;
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}
+.navbarroute{
+    float: right;
+    display: flex;
+    padding-right: 5%;
+
+}
+.listitems{
+    padding-top: 6%;
+    cursor: pointer;
+    
+}

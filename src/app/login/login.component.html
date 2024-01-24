@@ -1,0 +1,32 @@
+<div class="center-container">
+    <form #loginForm="ngForm" (ngSubmit)="login()"class="login-Form">
+      <h2>Login Form</h2>
+      Email ID <i class="glyphicon glyphicon-envelope"></i>
+      <input type="email" [(ngModel)]="loginFormValues.email" name="email" required minlength="8" maxlength="30" #email="ngModel" id="email">
+
+ <br><br>
+      Password <i class="glyphicon glyphicon-lock"></i>
+      <input type="password" [(ngModel)]="loginFormValues.password" name="password" required minlength="4" #password="ngModel" maxlength="16" id="password"><br>
+      <br>
+  <br>
+      <button type="submit" class="button1" [disabled]="!loginForm.valid">Login</button>
+    </form>
+  
+    <div *ngIf="showSuccessMessage && loginForm.valid">
+          <p>login Sucessful</p>
+    </div>
+  
+    <div *ngIf="email.errors?.['required'] && email.touched">
+      <p>Please enter a valid email</p>
+    </div>
+    <div *ngIf="email.errors?.['minlength'] && email.touched">
+      <p>Please enter at least 6 characters for email</p>
+    </div>
+    <div *ngIf="password.errors?.['minlength'] && password.touched">
+      <p>Please enter at least 8 characters for password</p>
+    </div>
+    <div *ngIf="password.errors?.['required'] && password.touched">
+      <p>Please enter a valid password</p>
+    </div>
+  </div>
+  
