@@ -22,7 +22,7 @@ const routes: Routes = [
   //   component: HomeComponent
   // },
    {
-    path:'search/:fromStationId/:toStationId/:dateOfTravel',
+    path:'search',
     component:SearchComponent
    },
    {

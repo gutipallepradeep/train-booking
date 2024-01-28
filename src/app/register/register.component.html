@@ -1,27 +1,51 @@
-<div class="body">
+<!-- <div class="body">
     
-<form (ngSubmit)="onSubmit()" >
+<form (ngSubmit)="onSubmit()" [formGroup]="userForm">
   <br>
   <br>
   <br>
   <br>
-    <h1>Registration Form</h1><br>
-    
+    <h1>Registration Form</h1>
 
-    <label for="email">email:</label>
-    <input type="email" id="email" name="email" [(ngModel)]="user.email" required><br>
-  
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email" required>
+
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name" [(ngModel)]="user.name" required><br>
-  
+    <input type="text" id="name" formControlName="name" required>
+
     <label for="password">Password:</label>
-    <input type="password" id="password" name="password" [(ngModel)]="user.password" required ><br>
-  
+    <input type="password" id="password" formControlName="password" required>
+
     <label for="number">Number:</label>
-    <input type="number" id="number" name="number" [(ngModel)]="user.number" required><br>
-   
-  <br>
+    <input type="number" id="number" formControlName="number" required>
+
+    <button type="submit" id="button1" style="margin-left: 50px;">Register</button>
   
-    <button type="submit" id="button1" style="margin-left: 50px;" >Register</button>
+  </form>
+</div> -->
+<div class="body">
+  <form (ngSubmit)="onSubmit()" [formGroup]="userForm" id="form2">
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 style="margin-left: 50px;">Registration Form</h1>
+
+    <label for="email" id="gmail" >Email:</label>
+    <input type="email" id="email" formControlName="email" required><br>
+
+    <label for="name" id="name" >Name:</label>
+    <input type="text" id="name" formControlName="name" required><br>
+
+    <label for="password" id="password" >Password:</label>
+    <input type="password" id="password" formControlName="password" required><br>
+
+    <label for="number" id="number" >Number:</label>
+    <input type="number" id="number" formControlName="number" required><br>
+
+    <button type="submit" id="button1" >Register</button>
+
   </form>
 </div>
+
+

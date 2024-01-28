@@ -11,62 +11,21 @@
     justify-content: space-between 10px;
     
   }
-
-  /* .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  } */
-
-  /* .form {
-    background-color: #fff;
-    padding: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    max-width: 250px;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-  } */
-
-  /* .label {
-    display: block;
-    margin-bottom: 8px;
-  } */
-
-  /* .input {
-    
-    padding: 8px;
-    margin-bottom: 12px;
-    box-sizing: border-box;
-  } */
-
-  /* .button {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-  } */
-
-  /* .button:hover {
-    background-color: #45a049;
-  } */
   #id{
     margin-left: 50px;
   }
   #gmail{
     margin-left: 35px;
+    
   }
   #name{
     margin-left: 37px;
   }
   #password{
-    margin-left: 20px;
+    margin-left: 30px;
   }
   #number{
-    margin-left: 25px;
+    margin-left: 32.7px;
   }
   #button1{
     border: none;
