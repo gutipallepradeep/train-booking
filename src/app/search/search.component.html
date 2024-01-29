@@ -1,1 +1,60 @@
-<p>search works!</p>
+<!-- <h1>search</h1>
+<div class="container">
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-8">
+        <h1>Search Results</h1>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>From Station</th>
+              <th>To Station</th>
+              <th>Date of Travel</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ trains.selectedFromStation }}</td>
+              <td>{{ trains.selectedToStation }}</td>
+              <td>{{ trains.selectedDateOfTravel }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div> -->
+  
+   <div id="upmain">
+   <div id="main">
+    <div id="col1" style="margin-left: 50px;">
+    <strong >{{ trains.selectedFromStation }} Express (17225)  Runs on : M T W S</strong><br>
+    <p><strong>09:25 {{ trains.selectedFromStation }} {{ trains.selectedDateOfTravel }}</strong>         <strong id="time">---9:00hrs---</strong>   <strong id="des">18:25  {{ trains.selectedToStation }} {{ trains.selectedDateOfTravel }}</strong></p>
+    <P>Available class :1A 2A 3A SL </P>
+    <b>Amount:516/-</b><br>
+    <button class="button1" >Book Now</button>
+    </div>
+    <div id="col1">
+        <strong> {{ trains.selectedToStation }} Express (17603)  Runs on : Every Day</strong><br>
+        <p><strong>10:25 {{ trains.selectedFromStation }} {{ trains.selectedDateOfTravel }}</strong>      <strong>---9:30hrs---</strong>   <strong id="des">18:55  {{ trains.selectedToStation }} {{ trains.selectedDateOfTravel }}</strong></p>
+        <P>Available class : 3A </P>
+        <strong id="">Amount:1016/-</strong><br>
+        <button class="button1">Book Now</button>
+        </div>
+        <br>
+    </div>
+   <div id="main">
+    <div id="col1" style="margin-left: 50px;">
+        <strong>{{ trains.selectedFromStation }}  {{ trains.selectedToStation }} Pass (18236)  Runs on : M W F</strong><br>
+        <p><strong>19:25 {{ trains.selectedFromStation }} {{ trains.selectedDateOfTravel }}</strong>        <strong>---12:00hrs---</strong>   <strong id="des">7:25  {{ trains.selectedToStation }} {{ trains.selectedDateOfTravel }}</strong></p>
+        <P>Available class : SL</P>
+        <strong id="">Amount:215/-</strong><br>
+        <button class="button1">Book Now</button>
+        </div>   
+        <div id="col1">
+            <strong>Vande Bharat (00725)  Runs on : Every Day</strong><br>
+            <p><strong>20:25 {{ trains.selectedFromStation }} {{ trains.selectedDateOfTravel }}</strong>     <strong>---9:00hrs---</strong>   <strong id="des">5:25  {{ trains.selectedToStation }} {{ trains.selectedDateOfTravel }}</strong></p>
+            <P>Available class :1A 2A 3A SL </P>
+            <strong id="">Amount:1516/-</strong><br>
+            <button class="button1">Book Now</button>
+            </div>   
+   </div>
+</div>

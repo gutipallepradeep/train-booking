@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   loginFormValues: any = { email: '', password: '' };
   showSuccessMessage = false;
-
+isLoggedIn = false;
   constructor(private authService: AuthService,private router: Router,  ) { }
 
   login(): void {
@@ -27,12 +27,13 @@ export class LoginComponent {
           alert("welcome");
           this.router.navigate(['/home']);
           this.authService.setShowSuccessMessage(true);
-          
+          this.isLoggedIn = true
           
         },
         (error) => {
           console.error('Login failed:', error);
           alert("fail");
+          this.router.navigate(['/register']);
         }
       );
   }

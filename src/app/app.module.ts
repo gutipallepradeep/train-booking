@@ -52,31 +52,31 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
-import { BookingComponent } from './booking/booking.component';
+
 import { SearchComponent } from './search/search.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { TrainsComponent } from './trains/trains.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
 ];
-
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AdminComponent,
-    BookingComponent,
+
     SearchComponent,
     HeaderComponent,
     LoginComponent,
     RegisterComponent,
+    TrainsComponent,
   ],
   imports: [
     BrowserModule,
@@ -84,7 +84,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule, // Add this line for reactive forms
+    ReactiveFormsModule, 
   ],
   providers: [],
   bootstrap: [AppComponent],

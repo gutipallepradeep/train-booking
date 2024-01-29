@@ -21,4 +21,10 @@ export class AuthService {
   setShowSuccessMessage(value: boolean): void {
     this.showSuccessMessageSource.next(value);
   }
+  isLoggedIn(): boolean {
+    const isLoggedIn = true;
+  console.log('isLoggedIn:', isLoggedIn);
+  return isLoggedIn;
+    
+  }
 }
