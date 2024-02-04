@@ -1,4 +1,4 @@
-.center-container {
+/* .center-container {
     text-align: center;
 }
 
@@ -36,4 +36,65 @@
 }
 #password{
     margin-left: 46px;
+} */
+.center-container {
+    text-align: center;
+}
+
+.login-form {
+    display: inline-block;
+    text-align: left;
+    max-width: 300px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.input-field {
+    font-size: 16px;
+}
+
+.login-form h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.button1 {
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #008CBA;
+}
+
+#email {
+    margin-left: 50px;
+}
+
+#password {
+    margin-left: 46px;
+}
+
+.captcha-container {
+    text-align: center;
+    width: 50px;
+}
+
+#captchaInput {
+    width: 122px; /* Set the width to 100% to match the email input's width */
+    height: 10%;
+    margin-left: 49%;
+    margin-bottom: 35px;
+    border: 1px solid black;
+    margin-top: -30px;
+}
+.captcha-display{
+    margin-left: -170px;
+    border: 1px solid black;
+    padding: 4px 6px;
+    margin-top: -40px;
 }

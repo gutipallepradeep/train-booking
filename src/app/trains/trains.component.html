@@ -1,1 +1,58 @@
-<h1>trains</h1>
+<div class="train-details">
+  <h4>Train Details</h4>
+  <p><strong>Train Number:</strong> {{ trainNumber }}</p>
+  <p><strong>Start Station:</strong> {{ startStation }}</p>
+  <p><strong>End Station:</strong> {{ endStation }}</p>
+  <p><strong>Amount:</strong> {{ Price }}</p>
+</div>
+
+<form class="add-passenger-form" (ngSubmit)="addPassenger()" #passengerForm="ngForm">
+  <h3>Add Passenger</h3>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="newPassenger.name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" [(ngModel)]="newPassenger.age" required>
+  </div>
+
+  <div class="form-group">
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" [(ngModel)]="newPassenger.gender" required>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <input type="hidden" name="trainNumber" [(ngModel)]="newPassenger.trainNumber">
+  <input type="hidden" name="from_station" [(ngModel)]="newPassenger.from_station">
+  <input type="hidden" name="to_station" [(ngModel)]="newPassenger.to_station">
+
+  <button type="submit" [disabled]="!passengerForm.valid">Add Passenger</button>
+</form>
+
+<div class="table-container" *ngIf="passengers.length > 0">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let passenger of passengers">
+        <td>{{ passenger.name }}</td>
+        <td>{{ passenger.age }}</td>
+        <td>{{ passenger.gender }}</td>
+        <td><button (click)="deletePassenger(passenger)">Delete </button></td>
+      </tr>
+    </tbody>
+  </table>
+  <button (click)="resetStoredCount()">Book Now</button>
+
+</div>

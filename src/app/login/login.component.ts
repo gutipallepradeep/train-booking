@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,OnInit} from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 
@@ -8,17 +8,37 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent  implements OnInit  {
+  
   loginFormValues: any = { email: '', password: '' };
+  email:any;
+  password:any;
+  captcha: string = ''
+  captchaText: string = ''; ;
+  captchaInput: string = '';
   showSuccessMessage = false;
 isLoggedIn = false;
   constructor(private authService: AuthService,private router: Router,  ) { }
-
+  ngOnInit(): void {
+    this.email = '';
+    this.password = '';
+    this.generateCaptcha();
+  }
   login(): void {
    
     console.log('Entered Email:', this.loginFormValues.email);
     console.log('Entered Password:', this.loginFormValues.password);
-
+    if (!this.captchaInput) {
+      alert('Please enter the captcha.');
+      return;
+    }
+  
+    
+    if (this.captchaInput !== this.captcha) {
+      alert('Please enter the correct captcha.');
+      return;
+    }
+  
     this.authService.login(this.loginFormValues.email, this.loginFormValues.password)
       .subscribe(
         (response) => {
@@ -37,4 +57,12 @@ isLoggedIn = false;
         }
       );
   }
+  generateCaptcha(): void {
+    const possibleChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const length = 6;
+    this.captcha = Array.from({ length }, () =>
+     possibleChars[Math.floor(Math.random() * possibleChars.length)]
+  ).join('');
+    }
 }
+

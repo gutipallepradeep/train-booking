@@ -23,21 +23,21 @@
     </div>
   </div> -->
   
-   <div id="upmain">
+   <!-- <div id="upmain">
    <div id="main">
     <div id="col1" style="margin-left: 50px;">
     <strong >{{ trains.selectedFromStation }} Express (17225)  Runs on : M T W S</strong><br>
     <p><strong>09:25 {{ trains.selectedFromStation }} {{ trains.selectedDateOfTravel }}</strong>         <strong id="time">---9:00hrs---</strong>   <strong id="des">18:25  {{ trains.selectedToStation }} {{ trains.selectedDateOfTravel }}</strong></p>
     <P>Available class :1A 2A 3A SL </P>
     <b>Amount:516/-</b><br>
-    <button class="button1" >Book Now</button>
+    <button class="button1"  (click)="bookTicket()">Book Now</button> <button (click)="checkavailable()">Check Available</button>
     </div>
     <div id="col1">
         <strong> {{ trains.selectedToStation }} Express (17603)  Runs on : Every Day</strong><br>
         <p><strong>10:25 {{ trains.selectedFromStation }} {{ trains.selectedDateOfTravel }}</strong>      <strong>---9:30hrs---</strong>   <strong id="des">18:55  {{ trains.selectedToStation }} {{ trains.selectedDateOfTravel }}</strong></p>
         <P>Available class : 3A </P>
         <strong id="">Amount:1016/-</strong><br>
-        <button class="button1">Book Now</button>
+        <button class="button1" (click)="bookTicket1()">Book Now</button><button (click)="checkavailable1()">Check Available</button>
         </div>
         <br>
     </div>
@@ -47,14 +47,131 @@
         <p><strong>19:25 {{ trains.selectedFromStation }} {{ trains.selectedDateOfTravel }}</strong>        <strong>---12:00hrs---</strong>   <strong id="des">7:25  {{ trains.selectedToStation }} {{ trains.selectedDateOfTravel }}</strong></p>
         <P>Available class : SL</P>
         <strong id="">Amount:215/-</strong><br>
-        <button class="button1">Book Now</button>
+        <button class="button1"  (click)="bookTicket2()">Book Now</button> <button (click)="checkavailable2()">Check Available</button>
         </div>   
         <div id="col1">
             <strong>Vande Bharat (00725)  Runs on : Every Day</strong><br>
             <p><strong>20:25 {{ trains.selectedFromStation }} {{ trains.selectedDateOfTravel }}</strong>     <strong>---9:00hrs---</strong>   <strong id="des">5:25  {{ trains.selectedToStation }} {{ trains.selectedDateOfTravel }}</strong></p>
             <P>Available class :1A 2A 3A SL </P>
             <strong id="">Amount:1516/-</strong><br>
-            <button class="button1">Book Now</button>
+            <button class="button1"  (click)="bookTicket3()">Book Now</button><button (click)="checkavailable3()">Check Available</button>
             </div>   
    </div>
+</div> -->
+<div id="main">
+  <div id="imgandpara">
+    <div id="img1">
+<img src="assets/train.jpg" alt="" id="mainimg">
+    </div>
+    <div id="title">
+      <p id="para"><b>Trains Towards {{ trains.selectedToStation }}</b></p>
+      <p id="para1">3 Trains are Available</p>
+    </div>
+    <p id="onwards">
+      <b>&#x20B9; {{train[0].price}}</b> <br>
+      <b>Onwards</b>
+    </p>
+  </div>
+  <div id="train1">
+    <div id="trainnumber">
+      <p id="trainnumberelement"><b>Train Number - {{train[0].number}}</b></p>
+      <p id="trainnumberelement1">Available class: {{train[0].classes}}</p>
+    </div>
+    <div id="traintime">
+      <p id="traintimeelement"  >{{ trains.selectedDateOfTravel }}</p>
+      <p id="time1" style=" text-align: center;"><b> {{train[0].startTime}}</b></p>
+      <p id="traintimeelement" >{{ trains.selectedFromStation }}</p>
+    </div>
+    <div id="duration">
+      <div id="time3">
+        <b>{{train[0].duration}}</b>
+      </div>
+    </div>
+    <div id="traintime">
+      <p id="traintimeelement"  >{{ trains.selectedDateOfTravel }}</p>
+      <p id="time1" style=" text-align: center;"><b> {{train[0].EndTime}}</b></p>
+      <p id="traintimeelement" >{{ trains.selectedToStation }}</p>
+    </div>
+    
+    <div id="book">
+
+    </div>
+    <div id="amount">
+      <p id="amount1">Starting At</p>
+      <button (click)="checkavailable()" id="button4">check Available</button>
+    </div>
+    <div>
+   
+    <p id="amount2"><b>&#x20B9; {{train[0].price}}</b></p>
+    <button (click)="navigateToTrain(train[0].number, trains.selectedFromStation, trains.selectedToStation, train[0].price)" id="button3">Book Now</button>
+  </div>
+  </div>
+  <div id="train1">
+    <div id="trainnumber">
+      <p id="trainnumberelement"><b>Train Number - {{train[1].number}}</b></p>
+      <p id="trainnumberelement1">Available class:  {{train[1].classes}}</p>
+    </div>
+    <div id="traintime">
+      <p id="traintimeelement"  >{{ trains.selectedDateOfTravel }}</p>
+      <p id="time1" style=" text-align: center;"><b> {{train[1].startTime}}</b></p>
+      <p id="traintimeelement" >{{ trains.selectedFromStation }}</p>
+    </div>
+    <div id="duration">
+      <div id="time3">
+        <b>{{train[1].duration}}</b>
+      </div>
+    </div>
+    <div id="traintime">
+      <p id="traintimeelement"  >{{ trains.selectedDateOfTravel }}</p>
+      <p id="time1" style=" text-align: center;"><b> {{train[1].EndTime}}</b></p>
+      <p id="traintimeelement" >{{ trains.selectedToStation }}</p>
+    </div>
+    
+    <div id="book">
+
+    </div>
+    <div id="amount">
+      <p id="amount1">Starting At</p>
+      <button (click)="checkavailable1()" id="button4">check Available</button>
+    </div>
+    <div>
+    
+    <p id="amount2"><b>&#x20B9; {{train[1].price}}</b></p>
+    <button (click)="navigateToTrain(train[1].number, trains.selectedFromStation, trains.selectedToStation, train[1].price)" id="button3">Book Now</button>
+  </div>
+  </div>
+  <div id="train1">
+    <div id="trainnumber">
+      <p id="trainnumberelement"><b>Train Number - {{train[2].number}}</b></p>
+      <p id="trainnumberelement1">Available class: {{train[1].classes}}</p>
+    </div>
+    <div id="traintime">
+      <p id="traintimeelement"  >{{ trains.selectedDateOfTravel }}</p>
+      <p id="time1" style=" text-align: center;"><b> {{train[1].startTime}}</b></p>
+      <p id="traintimeelement" >{{ trains.selectedFromStation }}</p>
+    </div>
+    <div id="duration">
+      <div id="time3">
+        <b>{{train[1].duration}}</b>
+      </div>
+    </div>
+    <div id="traintime">
+      <p id="traintimeelement"  >{{ trains.selectedDateOfTravel }}</p>
+      <p id="time1" style=" text-align: center;"><b> {{train[2].EndTime}}</b></p>
+      <p id="traintimeelement" >{{ trains.selectedToStation }}</p>
+    </div>
+
+    <div id="book">
+
+    </div>
+    <div id="amount">
+      <p id="amount1">Starting At</p>
+      <button (click)="checkavailable2()" id="button4">check Available</button>
+    </div>
+    <div>
+    
+    <p id="amount2"><b>&#x20B9;{{train[2].price}}</b></p>
+    <button (click)="navigateToTrain(train[2].number, trains.selectedFromStation, trains.selectedToStation, train[2].price)" id="button3">Book Now</button>
+  </div>
+  </div>
 </div>

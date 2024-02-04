@@ -1,0 +1,16 @@
+<!-- booking-success.component.html -->
+
+<div class="success-message">
+    <h2>Tickets Booked Successfully!</h2>
+    <p><strong>Train Number:</strong> {{ trainNumber }}</p>
+    <p><strong>Start Station:</strong> {{ startStation }}</p>
+    <p><strong>End Station:</strong> {{ endStation }}</p>
+    <p><strong>Total Amount:</strong> {{ totalPrice }}</p>
+    <p><strong>PNR Number:</strong> {{ pnrNumber }}</p>
+
+    <div class="passenger-details" *ngFor="let passenger of passengerDetails">
+      <p><strong>Name:</strong> {{ passenger.name }}</p>
+      <p><strong>Age:</strong> {{ passenger.age }}</p>
+      <p><strong>Seat Number:</strong> {{ passenger.seatNumber }}</p>
+    </div>
+</div>

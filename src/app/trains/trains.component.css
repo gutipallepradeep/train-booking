@@ -1,0 +1,93 @@
+.table-container {
+    max-width: 600px; /* Adjust the width as needed */
+    margin: 20px auto; /* Center the container */
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: auto; /* Add scroll if content exceeds container size */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  /* trains.component.css */
+
+.train-details {
+    text-align: center; /* Center align the content */
+    margin: 20px; /* Add some margin around the container */
+    padding: 20px; /* Add padding inside the container */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 8px; /* Add rounded corners */
+  }
+  
+  h1 {
+    color: #008CBA; /* Set the color of the heading */
+  }
+  
+  p {
+    margin: 10px 0; /* Add some vertical margin to paragraphs */
+  }
+  
+  strong {
+    color: #333; /* Set the color of the strong (bold) text */
+  }
+  /* trains.component.css */
+
+.add-passenger-form {
+    max-width: 400px; /* Set the maximum width of the form */
+    margin: 20px auto; /* Center the form on the page */
+    padding: 20px; /* Add padding to the form */
+    border: 1px solid #ccc; /* Add a border to the form */
+    border-radius: 8px; /* Add rounded corners to the form */
+  }
+  
+  .form-group {
+    margin-bottom: 15px; /* Add spacing between form groups */
+  }
+  
+  label {
+    display: block; /* Make labels block elements for better spacing */
+    margin-bottom: 5px; /* Add spacing below labels */
+  }
+  
+  input,
+  select {
+    width: 100%; /* Make inputs and selects fill the width of their container */
+    padding: 8px; /* Add padding to inputs and selects */
+    margin-bottom: 10px; /* Add spacing below inputs and selects */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  button {
+    background-color: #008CBA; /* Set the background color of the button */
+    color: #fff; /* Set the text color of the button */
+    padding: 10px; /* Add padding to the button */
+    border: none; /* Remove the default button border */
+    border-radius: 4px; /* Add rounded corners to the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  button:disabled {
+    background-color: #ccc; /* Set a different background color for disabled button */
+    cursor: not-allowed; /* Change cursor to not-allowed for disabled button */
+  }
+  

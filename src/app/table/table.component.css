@@ -1,0 +1,73 @@
+.table-container {
+  margin: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center; /* Center the content */
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Apply different background color to even rows */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+  /* Add this CSS in your stylesheet */
+
+button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size:10px;
+  }
+  
+  button:hover {
+    background-color: #c82333;
+  }
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid white; /* Border color - you can change this */
+    border-radius: 5px;
+    background-color: white; /* Background color - you can change this */
+    border: 1px solid black;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+  }
+  
+  form button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #2980b9;
+  }

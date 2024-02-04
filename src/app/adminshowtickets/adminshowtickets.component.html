@@ -1,0 +1,80 @@
+<!-- <p>adminshowtickets works!</p>
+
+<p>showtickets works!</p>
+
+<div *ngIf="userEmail">
+  <h1>Tickets for {{ userEmail }}</h1>
+
+  <table class="ticket-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Train Number</th>
+        <th>From Station</th>
+        <th>To Station</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ticket of tickets">
+        <td>{{ ticket.id }}</td>
+        <td>{{ ticket.name }}</td>
+        <td>{{ ticket.age }}</td>
+        <td>{{ ticket.gender }}</td>
+        <td>{{ ticket.trainNumber }}</td>
+        <td>{{ ticket.from_station }}</td>
+        <td>{{ ticket.to_station }}</td>
+        
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+<!-- adminshowtickets.component.html -->
+
+<p>adminshowtickets works!</p>
+
+<div *ngIf="userEmail">
+  <h1>Tickets for {{ userEmail }}</h1>
+  <div class="ticket-container">
+  <table class="ticket-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Train Number</th>
+        <th>From Station</th>
+        <th>To Station</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Check if there are tickets, else display a message -->
+      <ng-container *ngIf="tickets && tickets.length > 0; else noTickets">
+        <tr *ngFor="let ticket of tickets">
+          <td>{{ ticket.id }}</td>
+          <td>{{ ticket.name }}</td>
+          <td>{{ ticket.age }}</td>
+          <td>{{ ticket.gender }}</td>
+          <td>{{ ticket.trainNumber }}</td>
+          <td>{{ ticket.from_station }}</td>
+          <td>{{ ticket.to_station }}</td>
+          <!-- <td><button (click)="cancelTicket(ticket.id)">Cancel Ticket</button></td> -->
+          <td><button (click)="cancelTicket(ticket.id)">Cancel Ticket</button></td>
+
+        </tr>
+      </ng-container>
+      <!-- Display message when no tickets are booked -->
+      <ng-template #noTickets>
+        <tr>
+          <td colspan="8">Customer not yet booked any tickets.</td>
+        </tr>
+      </ng-template>
+    </tbody>
+  </table>
+  </div>
+</div>

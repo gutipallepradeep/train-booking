@@ -10,10 +10,11 @@
     <a href="" class="railway">Railway</a>
   <div class="navbarroute">
     <ul class="listitems" (click)="navigateToHome()">Home</ul>
-    <ul class="listitems">Trains</ul>
+    <ul *ngIf="isLoggedIn==false" class="listitems" (click)="navigateToAdmin()">admin</ul>
     <ul *ngIf="isLoggedIn==false" class="listitems" (click)="navigateToLogin()" id="login">Login</ul>
     
     <ul *ngIf="isLoggedIn==true" class="listitems" (click)="logout()">logout</ul>
+    <ul *ngIf="isLoggedIn==true" class="listitems" (click)="navigateTotickets()">showTickets</ul>
     <ul  *ngIf="isLoggedIn==false" class="listitems" (click)="navigateToregister()">Register</ul>
   </div>
 </div>

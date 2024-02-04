@@ -1,0 +1,79 @@
+<p>table works!</p>
+<div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Number</th>
+          <th>Name</th>
+          <th>delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{user.id}}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.password }}</td>
+          <td>{{ user.number }}</td>
+          <td>{{ user.name }}</td>
+          <td><button (click)="deleteUser(user.id)">delete</button></td>
+          <td><button (click)="openUpdateForm(user)">Update</button></td>
+         <!-- If 'email' is nested inside 'userDetails' -->
+         <!-- <td><button (click)="showTickets(user.userDetails?.email)">showtickets</button></td> -->
+         <td><button (click)="showTickets(user.email)">showtickets</button></td>
+
+        </tr>
+      </tbody>
+    </table>
+</div>
+<!-- <div *ngIf="showUpdateForm">
+  <form (ngSubmit)="updateUserDetails()" #updateForm="ngForm">
+    <input type="hidden" [(ngModel)]="updateUser.id" name="id">
+
+    <label>Email: </label>
+    <input type="text" [(ngModel)]="updateUser.email" name="email" required>
+
+    <label>Password: </label>
+    <input type="password" [(ngModel)]="updateUser.password" name="password" required>
+
+    <label>Number: </label>
+    <input type="number" [(ngModel)]="updateUser.number" name="number" required>
+
+    <label>Name: </label>
+    <input type="text" [(ngModel)]="updateUser.name" name="name" required>
+
+    <button type="submit">Submit</button>
+  </form>
+</div> -->
+<div *ngIf="showUpdateForm">
+  <form (ngSubmit)="updateUserDetails()" #updateForm="ngForm">
+    <!-- Hidden field for user id -->
+    <input type="hidden" [(ngModel)]="updateUser.id" name="id">
+
+    <label>Email: </label>
+    <input type="text" [(ngModel)]="updateUser.email" name="email" required>
+
+    
+    <div class="password-container">
+      <input type="{{ showPassword ? 'text' : 'password' }}" [(ngModel)]="updateUser.password" name="password" required>
+      <i class="fas fa-eye" (click)="togglePasswordVisibility()"></i>
+    </div>
+
+    <label>Number: </label>
+    <input type="number" [(ngModel)]="updateUser.number" name="number" required>
+
+    <label>Name: </label>
+    <input type="text" [(ngModel)]="updateUser.name" name="name" required>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+
+
+
+
+
+  

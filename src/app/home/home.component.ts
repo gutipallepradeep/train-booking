@@ -26,17 +26,17 @@ export class HomeComponent  {
     this.train.selectedFromStation = this.fromStation;
     this.train.selectedToStation = this.toStation;
     this.train.selectedDateOfTravel = this.dateOfTravel;
-
+    this.router.navigate(['search']);
     
-    showSuccessMessage.subscribe((successMessage) => {
-      if (successMessage) {
-        console.log('Show Success Message is true. Navigating to Search.');
-        this.router.navigate(['search']);
-      } else {
-        console.log('Show Success Message is false. Navigating to Login.');
-        this.router.navigate(['login']); 
-      }
-    });
+    // showSuccessMessage.subscribe((successMessage) => {
+    //   if (successMessage) {
+    //     console.log('Show Success Message is true. Navigating to Search.');
+    //     this.router.navigate(['search']);
+    //   } else {
+    //     console.log('Show Success Message is false. Navigating to Login.');
+    //     this.router.navigate(['login']); 
+    //   }
+    // });
   }
 
 

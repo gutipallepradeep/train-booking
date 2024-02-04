@@ -36,6 +36,15 @@ export class HeaderComponent implements OnInit {
   navigateToHome(): void {
     this.router.navigateByUrl('/home');
   }
+  navigateToAdmin():void{
+    this.router.navigateByUrl('/admin');
+  }
+  // navigateTotickets():void{
+  //   this.router.navigateByUrl('/tickets');
+  // }
+  navigateTotickets(): void {
+    this.router.navigate(['/tickets'], { queryParams: { userEmail: this.authService.getUserEmail() } });
+  }
   logout() {
 
     this.authService.setShowSuccessMessage(false);

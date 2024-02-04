@@ -1,0 +1,36 @@
+<!-- showtickets.component.html -->
+
+<p>showtickets works!</p>
+
+<!-- tickets.component.html -->
+
+<div *ngIf="userEmail">
+  <h1>Tickets for {{ userEmail }}</h1>
+
+  <table class="ticket-table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Train Number</th>
+        <th>From Station</th>
+        <th>To Station</th>
+        <th>Cancel Ticket</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let passenger of passengers; let even = even" [class.even-row]="even">
+        <td>{{passenger.id}}</td>
+        <td>{{ passenger.name }}</td>
+        <td>{{ passenger.age }}</td>
+        <td>{{ passenger.gender }}</td>
+        <td>{{ passenger.trainNumber }}</td>
+        <td>{{ passenger.from_station }}</td>
+        <td>{{ passenger.to_station }}</td>
+        <td><button (click)="cancelTicket(passenger.id)">Cancel Ticket</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

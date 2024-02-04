@@ -1,0 +1,58 @@
+/* adminshowtickets.component.css */
+
+/* Center the table */
+/* adminshowtickets.component.css */
+
+/* Center the table */
+.ticket-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+  
+  /* Add this style to apply different background colors to even and odd rows */
+  .ticket-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* or any other color you prefer */
+  }
+  
+  /* Style for table header */
+  .ticket-table thead {
+    background-color: #4CAF50; /* or any other color you prefer */
+    color: white;
+  }
+  
+  /* Style for table cells */
+  .ticket-table td, .ticket-table th {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Hover effect for rows */
+  .ticket-table tbody tr:hover {
+    background-color: #e0e0e0; /* or any other color you prefer on hover */
+  }
+  /* adminshowtickets.component.css */
+
+/* Add this style to the Cancel Ticket button */
+.ticket-table button {
+    background-color: #f44336; /* Red color */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  /* Style for the Cancel Ticket button on hover */
+  .ticket-table button:hover {
+    background-color: #d32f2f; /* Darker red color on hover */
+  }
+  
